@@ -1,0 +1,254 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Amma\Desktop\Practice\UVM\UVM_UART\sim
+vraminfr
+Z1 !s100 <hK;[@cRzKZzW@TD?Plm:1
+Z2 IN1FZ^f090Q4glohBen>zL2
+Z3 VDcR8d`_lSzz1M7AAZ4jDz1
+Z4 dC:\Users\Amma\Desktop\Practice\UVM\UVM_UART\sim
+Z5 w1505990144
+Z6 8../rtl/raminfr.v
+Z7 F../rtl/raminfr.v
+L0 2
+Z8 OE;L;10.0b;49
+r1
+!s85 0
+31
+Z9 !s108 1506061597.876000
+Z10 !s107 ../test/uart_test_lib.sv|../tb/uart_virtual_sequences.sv|../tb/uart_tb.sv|../tb/uart_virtual_sequencer.sv|../tb/uart_coverage_subscriber.sv|../tb/uart_scoreboard.sv|../agent_top/uart_agent.sv|../agent_top/uart_test_sequences.sv|../agent_top/uart_sequencer.sv|../agent_top/uart_monitor.sv|../agent_top/uart_driver.sv|../agent_top/uart_transaction.sv|../tb/uart_env_cfg.sv|../agent_top/uart_agent_cfg.sv|C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_deprecated_defines.svh|C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_reg_defines.svh|C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_callback_defines.svh|C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_sequence_defines.svh|C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/tlm1/uvm_tlm_imps.svh|C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_tlm_defines.svh|C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_printer_defines.svh|C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_object_defines.svh|C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_phase_defines.svh|C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_message_defines.svh|C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_version_defines.svh|C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/uvm_macros.svh|../agent_top/uart_agent_top.sv|../test/uart_test_pkg.sv|../rtl/uart_wb.v|../rtl/uart_transmitter.v|../rtl/uart_top.v|../rtl/uart_tfifo.v|../rtl/uart_sync_flops.v|../rtl/uart_rfifo.v|../rtl/uart_regs.v|../rtl/uart_receiver.v|../rtl/uart_interface.sv|../rtl/uart_defines.v|../rtl/uart_debug_if.v|../rtl/timescale.v|../rtl/raminfr.v|
+Z11 !s90 -work|work|../rtl/raminfr.v|../rtl/timescale.v|../rtl/uart_debug_if.v|../rtl/uart_defines.v|../rtl/uart_interface.sv|../rtl/uart_receiver.v|../rtl/uart_regs.v|../rtl/uart_rfifo.v|../rtl/uart_sync_flops.v|../rtl/uart_tfifo.v|../rtl/uart_top.v|../rtl/uart_transmitter.v|../rtl/uart_wb.v|+incdir+../rtl|+incdir+../agent_top|+incdir+../test|+incdir+../tb|+incdir+../src|../test/uart_test_pkg.sv|../agent_top/uart_agent_top.sv|
+Z12 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z13 !s92 -work work +incdir+../rtl +incdir+../agent_top +incdir+../test +incdir+../tb +incdir+../src -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vuart_debug_if
+Z14 !s100 z9=dEf7<O`NFcMM]Acg=70
+Z15 Iz1fEgaiLKzoajfAW:a8an2
+Z16 V`mQU3EP`OIkRj^CL31f5d2
+R4
+Z17 w1505990335
+Z18 8../rtl/uart_debug_if.v
+Z19 F../rtl/uart_debug_if.v
+L0 89
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+R12
+R13
+Yuart_interface
+Z20 DXx6 sv_std 3 std 0 22 :CP]PHbGOHGT_H:3KF`8L2
+Z21 !s100 06EPSKWJ83OodY_@^APBS0
+Z22 IU1IZXEF@0cCPBjG;ckiS30
+Z23 V5CB^1Q[LD5NVmXIlVUOoN3
+Z24 !s105 uart_interface_sv_unit
+S1
+R4
+Z25 w1505991949
+Z26 8../rtl/uart_interface.sv
+Z27 F../rtl/uart_interface.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+R12
+R13
+vuart_receiver
+Z28 !s100 zQ>A8n:ShG@9_0:@M_K143
+Z29 ITDPnZj_R;jSbL;icjB8?<1
+Z30 VOm3ETeLEGYEHim2OSSk<O2
+R4
+Z31 w1505990451
+Z32 8../rtl/uart_receiver.v
+Z33 F../rtl/uart_receiver.v
+Z34 L0 198
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+R12
+R13
+vuart_regs
+Z35 !s100 GgbiiTh`;KXX@=igEWYOi0
+Z36 ImW42Vh8d]4ZcMd`Yeb99P3
+Z37 VF1ZD;3RL3=bkE:?H49TOF2
+R4
+Z38 w1505990614
+Z39 8../rtl/uart_regs.v
+Z40 F../rtl/uart_regs.v
+Z41 L0 231
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+R12
+R13
+vuart_rfifo
+Z42 !s100 iZCaKS7]aJ^[XKknDdcWW1
+Z43 IX;e9dD9L[?o>NIOWM0cSC3
+Z44 VJEk7aHWCc@0YLHj[3amdA1
+R4
+Z45 w1505990687
+Z46 8../rtl/uart_rfifo.v
+Z47 F../rtl/uart_rfifo.v
+Z48 L0 150
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+R12
+R13
+vuart_sync_flops
+Z49 !s100 G0]gXJ99UPHRcKb?7n?;F3
+Z50 IB^i^zcjQkPAK38Uio]Qj51
+Z51 V=E[>h;;<alWFRN;XMnc742
+R4
+Z52 w1505990759
+Z53 8../rtl/uart_sync_flops.v
+Z54 F../rtl/uart_sync_flops.v
+L0 71
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+R12
+R13
+Xuart_test_pkg
+R20
+Z55 DXx6 mtiUvm 7 uvm_pkg 0 22 8eb@ESBO]d@L>K^c5RzQ31
+!s100 C<ACjHO4K8aX<b^UUMVIW3
+I`@A24oAfelSEP`;BU5^J<0
+V`@A24oAfelSEP`;BU5^J<0
+S1
+R4
+w1506061594
+Z56 8../test/uart_test_pkg.sv
+Z57 F../test/uart_test_pkg.sv
+Z58 FC:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/uvm_macros.svh
+Z59 FC:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_version_defines.svh
+Z60 FC:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_message_defines.svh
+Z61 FC:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_phase_defines.svh
+Z62 FC:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_object_defines.svh
+Z63 FC:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_printer_defines.svh
+Z64 FC:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_tlm_defines.svh
+Z65 FC:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/tlm1/uvm_tlm_imps.svh
+Z66 FC:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_sequence_defines.svh
+Z67 FC:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_callback_defines.svh
+Z68 FC:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_reg_defines.svh
+Z69 FC:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src/macros/uvm_deprecated_defines.svh
+Z70 F../agent_top/uart_agent_cfg.sv
+Z71 F../tb/uart_env_cfg.sv
+Z72 F../agent_top/uart_transaction.sv
+Z73 F../agent_top/uart_driver.sv
+Z74 F../agent_top/uart_monitor.sv
+Z75 F../agent_top/uart_sequencer.sv
+Z76 F../agent_top/uart_test_sequences.sv
+Z77 F../agent_top/uart_agent.sv
+Z78 F../agent_top/uart_agent_top.sv
+Z79 F../tb/uart_scoreboard.sv
+Z80 F../tb/uart_coverage_subscriber.sv
+Z81 F../tb/uart_virtual_sequencer.sv
+Z82 F../tb/uart_tb.sv
+Z83 F../tb/uart_virtual_sequences.sv
+Z84 F../test/uart_test_lib.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+R12
+R13
+vuart_tfifo
+Z85 !s100 :nN551HDNiT@0mbUh0`DM0
+Z86 I4[06BV_XV^YC7K:2:iN2:0
+Z87 V2PDlIGP`[=H@ZfMhJzZV?1
+R4
+Z88 w1505990808
+Z89 8../rtl/uart_tfifo.v
+Z90 F../rtl/uart_tfifo.v
+Z91 L0 144
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+R12
+R13
+vuart_top
+Z92 !s100 [NPONO;TSJ?U^3h=jaYnz3
+Z93 Ii?9l=l=D[V]F`O3f3zz^;2
+Z94 V2]WbHOG4lG;0H4V9@XZ3j2
+R4
+Z95 w1505990859
+Z96 8../rtl/uart_top.v
+Z97 F../rtl/uart_top.v
+Z98 L0 140
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+R12
+R13
+vuart_transmitter
+Z99 !s100 [l=GZV=@6W5Omz@zJJoGS0
+Z100 I;15oPeb^G3a1D_GAIV?fX3
+Z101 Vm9a1`IjlLaH[Nz`An4XSe3
+R4
+Z102 w1505990909
+Z103 8../rtl/uart_transmitter.v
+Z104 F../rtl/uart_transmitter.v
+Z105 L0 154
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+R12
+R13
+vuart_wb
+Z106 !s100 ;W:S`GGV]0Z3G3;G[cn8I2
+Z107 I?N7mV<O>JX=X0?n^0HCDF0
+Z108 VZ:?JaUf>gHS38J[9gJoXB3
+R4
+Z109 w1505990974
+Z110 8../rtl/uart_wb.v
+Z111 F../rtl/uart_wb.v
+Z112 L0 142
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+R12
+R13

@@ -1,0 +1,102 @@
+RTL = ../rtl/*
+INC = +incdir+../agent_top +incdir+../test +incdir+../tb +define+UVM_REPORT_DISABLE_FILE_LINE
+SVTB =  ../test/uart_verification_top.sv
+SVTB1 = ../test/uart_test_pkg.sv
+COVOP= -dbg -coverage sb
+work = work
+VSIMOPT= +access +r -sva 
+VSIMBATCH = -acdb_file mem_cov.acdb
+VSIMBATCH1 = -c -acdb_file mem_cov1.acdb -do "log -rec *;run -all;exit"
+VSIMBATCH2 = -c -acdb_file mem_cov2.acdb -do "log -rec *;;run -all;exit"
+VSIMBATCH3 = -c -acdb_file mem_cov3.acdb -do "log -rec *;;run -all;exit"
+VSIMBATCH4 = -c -acdb_file mem_cov4.acdb -do "log -rec *;;run -all;exit"
+VSIMBATCH5 = -c -acdb_file mem_cov5.acdb -do "log -rec *;;run -all;exit"
+VSIMBATCH6 = -c -acdb_file mem_cov6.acdb -do "log -rec *;;run -all;exit"
+VSIMBATCH7 = -c -acdb_file mem_cov7.acdb -do "log -rec *;;run -all;exit"
+VSIMBATCH8 = -c -acdb_file mem_cov8.acdb -do "log -rec *;;run -all;exit"
+VSIMBATCH9 = -c -acdb_file mem_cov9.acdb -do "log -rec *;;run -all;exit"
+VSIMBATCH10 = -c -acdb_file mem_cov10.acdb -do "log -rec *;;run -all;exit"
+VSIMBATCH11 = -c -acdb_file mem_cov11.acdb -do "log -rec *;;run -all;exit"
+VSIMBATCH12 = -c -acdb_file mem_cov12.acdb -do "log -rec *;;run -all;exit"
+
+
+lib:
+	vlib $(work)
+	vmap work $(work)
+
+sv_cmp:clean lib comp0 
+         
+run_sim:
+	vsim $(VSIMOPT) $(VSIMCOV) $(VSIMBATCH1)  -sv_seed random -l s.log work.uart_verification_top +UVM_TESTNAME=uart_base_test  +UVM_VERBOSITY=UVM_MEDIUM
+	vsim -c -do "acdb report -db mem_cov1.acdb -html -o mem_cov1.html" 
+
+comp0:
+	vlog -uvm -work $(work) $(COVOP) $(RTL) $(INC) $(SVTB1) $(SVTB)
+
+run_test0: sv_cmp
+	vsim  $(VSIMBATCH1) $(VSIMOPT) $(VSIMCOV)  -sva -sv_seed random -l test1_sim.log work.uart_verification_top +UVM_OBJECTION_TRACE +UVM_TESTNAME=uart_base_test +UVM_VERBOSITY=UVM_MEDIUM #The Default Verbosity is medium
+	vsim -c -do "acdb report -db mem_cov1.acdb -html -o mem_cov1.html;exit"   
+
+run_test1: sv_cmp
+	vsim  $(VSIMBATCH2) $(VSIMOPT) $(VSIMCOV)  -sva -sv_seed random -l test1_sim.log work.uart_verification_top +UVM_OBJECTION_TRACE +UVM_TESTNAME=uart_first_test +UVM_VERBOSITY=UVM_MEDIUM #The Default Verbosity is medium
+	vsim -c -do "acdb report -db mem_cov2.acdb -html -o mem_cov2.html;exit"   
+
+run_test2: sv_cmp
+	vsim  $(VSIMBATCH3) $(VSIMOPT) $(VSIMCOV)  -sva -sv_seed random -l test1_sim.log work.uart_verification_top +UVM_OBJECTION_TRACE +UVM_TESTNAME=uart_baud_test +UVM_VERBOSITY=UVM_MEDIUM #The Default Verbosity is medium
+	vsim -c -do "acdb report -db mem_cov3.acdb -html -o mem_cov3.html;exit"   
+
+run_test3: sv_cmp
+	vsim  $(VSIMBATCH4) $(VSIMOPT) $(VSIMCOV)  -sva -sv_seed random -l test1_sim.log work.uart_verification_top +UVM_OBJECTION_TRACE +UVM_TESTNAME=uart_halfduplex_test +UVM_VERBOSITY=UVM_MEDIUM #The Default Verbosity is medium
+	vsim -c -do "acdb report -db mem_cov4.acdb -html -o mem_cov4.html;exit"   
+
+run_test4: sv_cmp 
+	vsim  $(VSIMBATCH5) $(VSIMOPT) $(VSIMCOV)  -sva -sv_seed random -l test1_sim.log work.uart_verification_top +UVM_OBJECTION_TRACE +UVM_TESTNAME=uart_fullduplex_test +UVM_VERBOSITY=UVM_MEDIUM #The Default Verbosity is medium
+	vsim -c -do "acdb report -db mem_cov5.acdb -html -o mem_cov5.html;exit"   
+
+run_test5: sv_cmp
+	vsim  $(VSIMBATCH6) $(VSIMOPT) $(VSIMCOV)  -sva -sv_seed random -l test1_sim.log work.uart_verification_top +UVM_OBJECTION_TRACE +UVM_TESTNAME=uart_fullduplex_parityerror_test +UVM_VERBOSITY=UVM_MEDIUM #The Default Verbosity is medium
+	vsim -c -do "acdb report -db mem_cov6.acdb -html -o mem_cov6.html;exit"   
+
+run_test6: sv_cmp
+	vsim  $(VSIMBATCH7) $(VSIMOPT) $(VSIMCOV)  -sva -sv_seed random -l test1_sim.log work.uart_verification_top +UVM_OBJECTION_TRACE +UVM_TESTNAME=uart_fullduplex_framingerror_test +UVM_VERBOSITY=UVM_MEDIUM #The Default Verbosity is medium
+	vsim -c -do "acdb report -db mem_cov7.acdb -html -o mem_cov7.html;exit"   
+
+run_test7: sv_cmp
+	vsim  $(VSIMBATCH8) $(VSIMOPT) $(VSIMCOV)  -sva -sv_seed random -l test1_sim.log work.uart_verification_top +UVM_OBJECTION_TRACE +UVM_TESTNAME=uart_fullduplex_breakinterrupt_test +UVM_VERBOSITY=UVM_MEDIUM #The Default Verbosity is medium
+	vsim -c -do "acdb report -db mem_cov8.acdb -html -o mem_cov8.html;exit"   
+
+run_test8: sv_cmp
+	vsim  $(VSIMBATCH9) $(VSIMOPT) $(VSIMCOV)  -sva -sv_seed random -l test1_sim.log work.uart_verification_top +UVM_OBJECTION_TRACE +UVM_TESTNAME=uart_fullduplex_overrun_test +UVM_VERBOSITY=UVM_MEDIUM #The Default Verbosity is medium
+	vsim -c -do "acdb report -db mem_cov9.acdb -html -o mem_cov9.html;exit"   
+
+run_test9: sv_cmp
+	vsim  $(VSIMBATCH10) $(VSIMOPT) $(VSIMCOV)  -sva -sv_seed random -l test1_sim.log work.uart_verification_top +UVM_OBJECTION_TRACE +UVM_TESTNAME=uart_fullduplex_timeout_test +UVM_VERBOSITY=UVM_MEDIUM #The Default Verbosity is medium
+	vsim -c -do "acdb report -db mem_cov10.acdb -html -o mem_cov10.html;exit"   
+
+run_test10: sv_cmp
+	vsim  $(VSIMBATCH11) $(VSIMOPT) $(VSIMCOV)  -sva -sv_seed random -l test1_sim.log work.uart_verification_top +UVM_OBJECTION_TRACE +UVM_TESTNAME=uart_halfduplex_5bit_test +UVM_VERBOSITY=UVM_MEDIUM #The Default Verbosity is medium
+	vsim -c -do "acdb report -db mem_cov11.acdb -html -o mem_cov11.html;exit"   
+
+run_test11: sv_cmp
+	vsim  $(VSIMBATCH12) $(VSIMOPT) $(VSIMCOV)  -sva -sv_seed random -l test1_sim.log work.uart_verification_top +UVM_OBJECTION_TRACE +UVM_TESTNAME=uart_fullduplex_thrempty_test +UVM_VERBOSITY=UVM_MEDIUM #The Default Verbosity is medium
+	vsim -c -do "acdb report -db mem_cov12.acdb -html -o mem_cov12.html;exit"   
+
+	
+clean:
+	rm -rf modelsim.* transcript* *log* work vsim.wlf fcover* covhtml* mem_cov* 
+	clear
+
+report:
+	vsim -c -do "acdb merge -cov sbfa -i mem_cov4.acdb -i mem_cov5.acdb -i mem_cov6.acdb -i mem_cov7.acdb -i mem_cov8.acdb -i mem_cov9.acdb -i mem_cov10.acdb -i mem_cov11.acdb -i mem_cov12.acdb -o mem_cov_merged.acdb;exit"
+
+rep:
+	vsim -c -do "acdb report -db mem_cov_merged.acdb -html -o mem_cov_merged.html;exit" 
+
+cov1:
+	firefox mem_cov5.html &
+
+cov:
+	firefox mem_cov_merged.html &
+
+regress: clean run_test3 run_test4 run_test5 run_test6 run_test7 run_test8 run_test9 run_test10 run_test11 report rep cov
+regress1: clean run_test0 run_test1 report rep cov
